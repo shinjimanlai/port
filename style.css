@@ -1,0 +1,794 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #1d1d1d;
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #393939;
+    position: fixed;
+    z-index: 3;
+    background-color: #1d1d1d;
+}
+
+.header label.logo {
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    letter-spacing: 2px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    animation: shine 7s linear infinite;
+    position: relative;
+    line-height: 50px;
+    margin-left: 15px;
+}
+
+.header ul {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 3;
+}
+
+.header ul li {
+    margin: 65px 0;
+}
+
+.header ul li a {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.header ul li a span:hover{
+    animation: myanime .3s ease-in-out 1;
+    color: #00b3ff;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ ul {
+    left: 0;
+    background-color: #1d1d1d;
+}
+
+.header .checkbtn {
+    color: white;
+    float: right;
+    font-size: 24px;
+    margin-right: 15px;
+    margin-top: 7px;
+}
+
+/* Header finishes */
+
+.intro {
+    width: 100%;
+    height: 100vh;
+}
+
+.intro .intro-text {
+    color: #222;
+    height: calc(100vh - 50px);
+    position: absolute;
+    left:50%;
+    top: 53.9%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 90%;
+}
+
+.intro .intro-text .text-top {
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    border-bottom: 2px solid #000;
+    top: 0;
+}
+
+.intro .intro-text .text-top .texts {
+    padding: 7.5px 0;
+    position: absolute;
+    animation: showTopText 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translate(0, 100%);
+}
+
+.intro .intro-text .text-top .texts span {
+    display: block;
+    color: #fff;
+}
+
+.intro .intro-text .text-top .texts .a {
+    font-size: 30px;
+    color: white;
+}
+
+.intro .intro-text .text-top .texts .b{
+    font-size: 40px;
+}
+
+.intro .intro-text .text-bottom {
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.intro .intro-text .text-bottom .txt {
+    color: #cd594a;
+    font-size: 32px;
+    padding: 7.5px 0;
+    position: absolute;
+    animation: showBottomText 0.5s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
+}
+
+.about {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.about .about-first .about-heading {
+    color: #Fff;
+    animation: glow 2500ms linear infinite 2000ms;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-family: 'baskerville';
+    font-style: italic;
+    padding-top: 50px;
+}
+
+.about .about-second {
+    width: 100%;
+}
+
+.about .about-second .about-image {
+    width: 70%;
+    height: 300px;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 30px;
+}
+
+.about .about-second .about-text {
+    margin-top: 30px;
+    color: #fff;
+    text-indent: 50px;
+}
+
+.about .about-last {
+    margin-top: 30px;
+}
+
+.about .about-last p {
+    color: #fff;
+    text-align: center;
+    margin: 25px auto 25px auto;
+    width: 300px;
+    border-radius: 10px;
+    transition: .3s;
+    padding: 10px 0;
+}
+
+.about .about-last .container {
+    width: 100%;
+    background-color: #ddd;
+    transition: .3s;
+}
+  
+.about .about-last .container .skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.html {
+    width: 70%;
+    background-color: #04AA6D;
+}
+.css {
+    width: 60%;
+    background-color: #2196F3;
+}
+.js {
+    width: 5%;
+    background-color: #f44336;
+}
+
+.about .about-last .h:hover {
+    color: #04AA6D;
+    box-shadow: 0 0 10px #04AA6D,
+    0 0 30px #04AA6D,
+    0 0 60px #04AA6D,
+    0 0 100px #04AA6D;
+}
+
+.about .about-last .c:hover {
+    color: #2196F3;
+    box-shadow: 0 0 10px #2196F3,
+    0 0 30px #2196F3,
+    0 0 60px #2196F3,
+    0 0 100px #2196F3;
+}
+
+.about .about-last .j:hover {
+    color: #f44336;
+    box-shadow: 0 0 10px #f44336,
+    0 0 30px #f44336,
+    0 0 60px #f44336,
+    0 0 100px #f44336;
+}
+
+.about .about-last .container:hover {
+    transform: scale(1.1);
+}
+
+/* About finishes */
+
+.projects-heading {
+    color: #Fff;
+    animation: glow 2500ms linear infinite 2000ms;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-family: 'baskerville';
+    font-style: italic;
+    padding-top: 50px;
+}
+
+.wrap {
+    display: grid;
+    gap: 30px;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+.projects {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.card {
+    position: relative;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 25px  50px rgba(0, 0, 0, 0.15);
+    border-radius: 20px; 
+    transition: .3s;
+}
+
+.card .exp {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.card .project {
+    position: absolute;
+    top: 40px;
+    left: -15px;
+    width: 100%;
+    height: 50px;
+    background: #00b3ff;
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+}
+
+.card .project::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    width: 15px;
+    height: 30px;
+    background: #005980;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    z-index: 2;
+}
+
+.card .project::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    width: 15px;
+    height: 15px;
+    background: #00b3ff;
+    z-index: 1;
+}
+
+.card .project p {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    padding-top: 4px;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+/* projects finish */
+
+.contact-heading {
+    color: #Fff;
+    animation: glow 2500ms linear infinite 2000ms;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-family: 'baskerville';
+    font-style: italic;
+    padding-top: 50px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+.contact .name {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact .name input {
+    padding: 6px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+.contact .email {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+
+.contact .email input {
+    padding: 6px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+.contact .msg {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact .msg textarea {
+    padding: 6px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    height: 150px;
+}
+
+.contact .submit {
+    color: #00b3ff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact .submit:hover {
+    background-color: #00b3ff;
+    color: #fff;
+}
+
+.contact label {
+    color: #Fff;
+}
+
+/* contact finishes */
+
+.footer {
+    width: 100%;
+    margin-top: 50px;
+    border-top: 1px solid #393939;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .fb {
+    width: 33%;
+    font-size: 40px;
+    border-left: 1px solid #393939;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer .steam {
+    width: 33%;
+    font-size: 40px;
+    border-left: 1px solid #393939;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer .twitter {
+    width: 33%;
+    font-size: 40px;
+    border-left: 1px solid #393939;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer i:hover {
+    transform: scale(1.5);
+    transition: .3s;
+    cursor: pointer;
+}
+
+@keyframes shine {
+    0% {
+      background-position-x: -500%;
+    }
+    100% {
+      background-position-x: 500%;
+    }
+}
+
+@keyframes myanime {
+    0% {
+        transform: scaleY(1) scaleX();
+    }
+    50% {
+        transform: scaleX(1.5) scaleY(0.5);
+    }
+    60% {
+        transform: scaleY(1.4) scaleX(0.6);
+    }
+    70% {
+        transform: scaleX(1.3) scaleY(0.7);
+    }
+    80% {
+        transform: scaleY(1.2) scaleX(0.8);
+    }
+    90% {
+        transform: scaleX(1.1) scaleY(0.9);
+    }
+    100% {
+        transform: scaleY(1) scaleX(1);
+    }
+}
+
+@keyframes showTopText {
+    0% { transform: translate3d(0, 100%, 0); }
+    40%, 60% { transform: translate3d(0, 50%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes showBottomText {
+    0% { transform: translate3d(0, -100%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }
+}
+
+@media (min-width: 576px) {
+    .wrap {
+        max-width: 540px;
+        grid-template-columns: repeat(2, 270px);
+    }
+}
+
+@media (min-width: 768px){
+    .header ul {
+        display: flex;
+        left: initial;
+        width: initial;
+        height: initial;
+        right: 0;
+        top: 0;
+    }
+
+    .header ul li {
+        margin: 10px 15px;
+    }
+
+    .checkbtn {
+        display: none;
+    }
+
+    .intro .intro-text .text-top {
+        width: 500px;
+    }
+
+    .about .about-second {
+        display: flex;
+    }
+
+    .about .about-second .about-image {
+        width: 200px;
+        height: 300px;
+    }
+
+    .about .about-second .about-text {
+        width: 60%;
+    }
+
+    .about .about-last p {
+        font-size: 24px;
+    }
+
+    .wrap {
+        max-width: 730px;
+        grid-template-columns: repeat(3,32%);
+    }
+
+    .contact {
+        max-width: 660px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        height: 65px;
+    }
+
+    .header label.logo {
+        line-height: 65px;
+        margin-left: 25px;
+        font-size: 36px;
+        letter-spacing: 4px;
+    }
+
+    .header ul li {
+        margin: 13.5px 25px;
+    }
+
+    .header ul li a {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+
+    .intro .intro-text {
+        height: calc(100vh - 65px);
+    }
+
+    .intro .intro-text .text-top {
+        width: 750px;
+    }
+
+    .intro .intro-text .text-top .texts .a {
+        font-size: 50px;
+    }
+
+    .intro .intro-text .text-top .texts .b {
+        font-size: 64px;
+    }
+
+    .intro .intro-text .text-bottom .txt {
+        font-size: 48px;
+    }
+
+    .about .about-first .about-heading {
+        padding-top: 65px;
+        font-size: 52px;
+    }
+
+    .about .about-second .about-image {
+        width: 300px;
+        height: 400px;
+    }
+
+    .about .about-second .about-text {
+        font-size: 24px;
+    }
+
+    .about .about-last {
+        margin-top: 45px;
+    }
+
+    .about .about-last p {
+        font-size: 36px;
+    }
+
+    .about .about-last .container .skills {
+        font-size: 24px;
+    }
+
+    .about .about-first .about-heading {
+        font-size: 48px;
+    }
+
+    .about .about-second .about-text {
+        font-size: 24px;
+    }
+
+    .about .about-last p {
+        font-size: 36px;
+    }
+
+    .about .about-last .container .skills {
+        font-size: 24px;
+    }
+    
+    .projects-heading {
+        padding-top: 65px;
+        font-size: 52px;
+    }
+
+    .wrap {
+        max-width: 990px;
+        grid-template-columns: repeat(4, 23.5%);
+    }
+
+    .contact-heading {
+        padding-top: 65px;
+        font-size: 52px;
+    }
+
+    .contact {
+        max-width: 800px;
+    }
+
+    .contact .name label {
+        font-size: 24px;
+    }
+
+    .contact .name input {
+        padding: 10px;
+        margin-top: 16px;
+        margin-bottom: 32px;
+        font-size: 20px;
+    }
+
+    .contact .email label {
+        font-size: 24px;
+    }
+
+    .contact .email input {
+        padding: 10px;
+        margin-top: 16px;
+        margin-bottom: 32px;
+        font-size: 20px;
+    }
+
+    .contact .msg label {
+        font-size: 24px;
+    }
+
+    .contact .msg textarea {
+        padding: 10px;
+        margin-top: 16px;
+        margin-bottom: 32px;
+        height: 200px;
+        font-size: 20px;
+    }
+
+    .contact .submit {
+        padding: 15px 25px;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .intro .intro-text .text-top {
+        width: 1200px;
+    }
+
+    .intro .intro-text .text-top .texts .a {
+        font-size: 64px;
+    }
+
+    .intro .intro-text .text-top .texts .b {
+        font-size: 78px;
+    }
+
+    .intro .intro-text .text-bottom .txt {
+        font-size: 62px;
+    }
+    .header {
+        height: 80px;
+    }
+
+    .header label.logo {
+        line-height: 80px;
+        margin-left: 35px;
+        font-size: 48px;
+        letter-spacing: 6px;
+    }
+
+    .header ul li {
+        margin: 12.5px 30px;
+    }
+
+    .header ul li a {
+        font-size: 36px;
+        letter-spacing: 3px;
+    }
+
+    .intro .intro-text {
+        height: calc(100vh - 80px);
+    }
+
+    .about .about-first .about-heading {
+        padding-top: 80px;
+        font-size: 64px;
+    }
+
+    .about .about-second .about-image {
+        width: 350px;
+        height: 450px;
+    }
+
+    .about .about-second .about-text {
+        font-size: 32px;
+    }
+
+    .about .about-last {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .projects-heading {
+        padding-top: 65px;
+        font-size: 52px;
+    }
+
+    .wrap {
+        max-width: 1410px;
+    }
+}
